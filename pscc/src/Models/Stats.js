@@ -101,7 +101,7 @@ export class CharacterStats extends React.Component{
         ]
    
     mainStatsMod = 
-    //this array holds objects related to the characters main stats. this array will be generated based on the values inputed in the form. TODO - figure out the algorithm needed to generate the modifier values based on the inputed value. TODO - also create a way to have the stats randomly rolled for you    
+    //this array holds objects related to the characters main stats. this array will be generated based on the values inputed in the form.  TODO - also create a way to have the stats randomly rolled for you    
         [
             {str : (this.adjust(this.mainStats.str))},
             {dex : (this.adjust(this.mainStats.dex))}, 
@@ -112,6 +112,7 @@ export class CharacterStats extends React.Component{
         ]
     
     auxStats = 
+    //TODO figure out how to push the form data from race creation into the speed variable.  
         [
             {speed: (null)},
             {baseAttackBonus: (null)}
