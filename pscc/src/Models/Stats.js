@@ -2,79 +2,22 @@ import React from 'react'
 
 export class CharacterStats extends React.Component{
     adjust(stat){
-       switch(stat){
-        case 1:
-           if(stat == [1,2,3]){
-               modifier = -4
-           }
-           break;
-        case 2:
-           if(stat == [4,5,6]){
-               modifier = -2
-           }
-           break;
-        case 3:
-           if(stat == [7,8,9]){
-               modifier = -1
-           }
-           break;
-        case 4:
-           if(stat == [10,11]){
-               modifier = 0
-           }
-           break;
-        case 5:
-           if(stat == [12,13]){
-               modifier = 1
-           }
-           break;
-        case 6:
-           if(stat == [14,15]){
-               modifier = 2
-           }
-           break;
-        case 7:
-           if(stat == [16,17]){
-               modifier = 3
-           }
-           break;
-        case 8:
-           if(stat == [18,19]){
-               modifier = 4
-           }
-           break;
-        case 9:
-           if(stat == [20,21]){
-               modifier = 5
-           }
-           break;
-        case 10:
-            if(stat == [22,23]){
-                modifier = 6
-            }
-            break;
-        case 11:
-            if(stat == [24,25]){
-                modifier = 7
-            }
-            break;
-        case 12:
-            if(stat == [26,27]){
-                modifier = 8
-            }
-            break;
-        case 12:
-            if(stat == [28,29]){
-                modifier = 9
-            }
-            break;
-        case 12:
-            if(stat == [30,31]){
-                modifier = 10
-            }
-            break;
+        switch( stat ){
+            case 1:
+            case 2:
+            case 3:
+                return -4;
+            case 4:
+            case 5:
+            case 6:
+                return -2;
+            case 7:
+            case 8:
+            case 9:
+                return -1;
+            default:
+                return (stat - 10)/2;
         }
-        return modifier
     }
     
     mainStats=
