@@ -20,7 +20,7 @@ class CreateRaceForm extends Component{
         
         <Form.Field>
         <label>Health </label>
-        <input name="raceName" type="Number"/>
+        <input name="raceHealth" type="Number"/>
         </Form.Field>
         
         <Form.Field>
@@ -75,7 +75,12 @@ class CreateRaceForm extends Component{
         <Form.Field>
         <label> Race Bonus Stat</label>
         <select name="raceBonusStat">Stat
+            <option value="str">str</option>
+            <option value="dex">dex</option>
+            <option value="con">con</option>
             <option value="int">int</option>
+            <option value="wis">wis</option>
+            <option value="cha">cha</option>
         </select>
         </Form.Field>
 
