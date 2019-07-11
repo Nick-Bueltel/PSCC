@@ -1,14 +1,10 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-mongoose.createConnection(process.env.DATABASE_URL, { useNewUrlParser: true});
-mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true});
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
 
-// database connection event
-mongoose.connection.on('connected', function () {
-  console.log(`Mongoose connected to: external database`);
+const db = mongoose.connection;
+
+db.once('connected', () => {
+  console.log(`Connected to MongoDB ${db.name} at ${db.host}:${db.port}`);
 });
-
-module.exports = mongoose;
-
-
 

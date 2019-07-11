@@ -3,11 +3,12 @@ import {Component} from 'react'
 import {Button, Checkbox, Form} from 'semantic-ui-react'
 
 
+
 class CreateRaceForm extends Component{
     render(){
         return(
 <div>
-    <Form>
+    <Form action="/"method="POST" >
         <Form.Field>
         <label>Race Name </label>
         <input name="raceName" type="Text"/>
