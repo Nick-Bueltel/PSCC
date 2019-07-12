@@ -6,7 +6,7 @@
     Natural Armor: 3
     Health: 10 + Con mod.
     Size: Large
-    Focus: +2 Int score
+    
     Vision: Dark
     Speed: 7
     Cyber Enhancement Slots: 3
@@ -15,6 +15,8 @@
     Language: One Ferdisian language
     +1 language for each point in int mod.
     Religion: The Akunai or The Balance. 
+    
+    Focus: +2 Int score
 
 * Human
 

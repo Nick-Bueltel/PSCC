@@ -71,4 +71,4 @@ var classSchema = new Schema({
 
 
 
-module.exports = mongoose.model('PlayerClass', classSchema)
+module.exports = mongoose.model('Class', classSchema)

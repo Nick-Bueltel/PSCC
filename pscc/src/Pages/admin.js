@@ -12,11 +12,11 @@ class Admin extends Component{
     render(){
         return(      
 <React.Fragment>
-            <h1>Admin Panel</h1>
+            {/* <h1>Admin Panel</h1>
             <h2>Race Form</h2>
             <div className="raceForm">
-                <CreateRaceForm/>
-            </div>
+                <CreateRaceForm/> */}
+            {/* </div> */}
             <h2>Class Form</h2>
             <div className="classForm">
                 <CreateClassForm/>

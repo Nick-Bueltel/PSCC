@@ -1,4 +1,4 @@
-const BASE_URL = '/api/races/';
+const BASE_URL = '/api/classes/';
 
 export default {
   index,
@@ -15,14 +15,14 @@ function index() {
   return fetch(BASE_URL, options).then(res => res.json());
 }
 
-function create(race) {
+function create(Class) {
   const options = {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
      
     },
-    body: JSON.stringify(race)
+    body: JSON.stringify(Class)
   };
   return fetch(BASE_URL, options).then(res => res.json());
 }

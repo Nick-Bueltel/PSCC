@@ -1,3 +1,17 @@
+
+
+ str : Number,
+
+​    dex : Number,
+
+​    con : Number,
+
+​    int : Number, 
+
+​    wis : Number,
+
+​    cha : Number,
+
 # Classes - Biotic
 
 * Biotic - Use tech-like powers, creating eff ects in the physical world

@@ -4,13 +4,18 @@
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",
+    "crypto": "^1.0.1",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
+    "forms-mongoose": "0.0.6",
     "lodash": "^4.17.13",
     "mongoose": "^5.6.3",
+    "mongoose-forms": "0.0.5",
+    "mongoose-metadata": "^1.0.3",
     "morgan": "^1.9.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-mongoose-form-maker": "0.0.2",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "semantic-ui-react": "^0.87.3",
@@ -36,5 +41,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "http://localhost:3001"
 }

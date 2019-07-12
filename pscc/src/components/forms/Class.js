@@ -2,20 +2,58 @@
 import React from 'react'
 import {Component} from 'react'
 import {Button, Checkbox, Form} from 'semantic-ui-react'
+import classService from '../../utils/classService'
 
 class CreateClassForm extends Component{
+   state = {
+    playerClassName: "",
+    ablRecharge1: "",
+    ablRecharge2: "",
+    startingWealth: "",
+    statBonus1 : "",
+    statBonus1Amount: null,
+    statBonus2 : "",
+    statBonus2Amount: null,
+    proficiency1 : false,
+    subClass1 : {},
+    subClass2 : {},
+    abilities : {},
+    purchaseRQ : false,
+   }
+   
+   
+    handleChange = (e) => {
+         
+        this.setState({
+
+          [e.target.name]: e.target.value
+        });
+  }
+   
+      handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+          await classService.create(this.state);
+ 
+
+         this.props.history.push('/');
+        } catch (err) {
+        }
+       }   
+
+    
     render(){
         return(
 <div>
-<Form>
+<Form onSubmit={this.handleSubmit}>
     <Form.Field>
         <label>Class Name </label>
-        <input type="Text" name="playerClassName" />
+        <input type="Text" name="playerClassName" onChange={this.handleChange} />
     </Form.Field>
     
     <Form.Field>
         <label>Ability Recharge</label>
-        <select name="ablRecharge1">
+        <select name="ablRecharge1" onChange={this.handleChange}>
             <option value="str">str</option>
             <option value="dex">dex</option>
             <option value="con">con</option>
@@ -25,7 +63,7 @@ class CreateClassForm extends Component{
 
         </select>
         +
-        <select name="ablRecharge2">
+        <select name="ablRecharge2" onChange={this.handleChange}>
             <option value="str">str</option>
             <option value="dex">dex</option>
             <option value="con">con</option>
@@ -37,12 +75,12 @@ class CreateClassForm extends Component{
     
     <Form.Field>
         <label>Starting Wealth</label>
-        <input type="Text" name="startingWealth" />
+        <input type="Text" name="startingWealth" onChange={this.handleChange}/>
     </Form.Field>
     
     <Form.Field>
         <label> Stat Bonus 1</label>
-        <select name="statBonus1">
+        <select name="statBonus1" onChange={this.handleChange}>
             <option value="str">str</option>
             <option value="dex">dex</option>
             <option value="con">con</option>
@@ -54,12 +92,12 @@ class CreateClassForm extends Component{
     
     <Form.Field>
         <label> Stats Bonus 1 Amount</label>
-        <input name="statBonus1Amount" type="Number" />
+        <input name="statBonus1Amount" type="Number" onChange={this.handleChange} />
     </Form.Field>
     
     <Form.Field>
         <label> Stat Bonus 2</label>
-        <select name="statBonus2">
+        <select name="statBonus2" onChange={this.handleChange}>
             <option value="str">str</option>
             <option value="dex">dex</option>
             <option value="con">con</option>
@@ -71,13 +109,13 @@ class CreateClassForm extends Component{
     
     <Form.Field>
         <label> Stats Bonus 2 Amount</label>
-        <input name="statBonus2Amount" type="Number" />
+        <input name="statBonus2Amount" type="Number" onChange={this.handleChange}/>
     </Form.Field>
     
     <Form.Field>
         <label>Proficiencies </label>
         <label>test</label>
-        <Checkbox name="proficiency1" ></Checkbox>
+        <Checkbox name="proficiency1" onChange={this.handleChange}/>
     </Form.Field>
     
     <Form.Field>
@@ -87,9 +125,24 @@ class CreateClassForm extends Component{
     </Form.Field>
 
     <Form.Field>
-        <label>Purchase Required?</label>
-        <Checkbox name="purchaseRQ"></Checkbox>
+        <label>Sub Class 1 Name</label>
+        <input name="subClass1" type="Text" onChange={this.handleChange}/>
     </Form.Field>
+        <Form.Field>
+            <label> Sub Class  1 Description </label>
+            <input name='subClass1.subDescription' type="Text" onChange={this.handleChange} />
+        </Form.Field>
+        <Form.Field>
+            <label> Sub Class  1 Ability </label>
+            <input name='subClass1.subDescription' type="Text" onChange={this.handleChange} />
+        </Form.Field>
+    
+
+
+    {/* <Form.Field>
+        <label>Sub Class 1 Name</label>
+        <input name="subClass1" type="Text" onChange={this.handleChange}/>
+    </Form.Field> */}
     
     <Button type="submit"> Submit </Button>
 
