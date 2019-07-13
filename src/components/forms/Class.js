@@ -1,7 +1,7 @@
 
 import React from 'react'
 import {Component} from 'react'
-import {Button, Checkbox, Form} from 'semantic-ui-react'
+import {Button, Checkbox, Form, TextArea} from 'semantic-ui-react'
 import classService from '../../utils/classService'
 
 class CreateClassForm extends Component{
@@ -126,8 +126,8 @@ class CreateClassForm extends Component{
     
     <Form.Field>
         <label>Proficiencies </label>
-        <label>test</label>
-        <Checkbox name="proficiency1" onChange={this.handleChange}/>
+
+        <TextArea name="proficiency1" onChange={this.handleChange}/>
     </Form.Field>
     
 
@@ -135,49 +135,49 @@ class CreateClassForm extends Component{
 
         <label>Abilities</label>
     <Form.Field>
-        <input type="Text" name="ability1" onChange={this.handleChange} />
+        <TextArea type="Text-Area" name="ability1" onChange={this.handleChange} />
     </Form.Field>
     <Form.Field>
-        <input type="Text" name="ability2" onChange={this.handleChange} />
+        <TextArea type="Text" name="ability2" onChange={this.handleChange} />
     </Form.Field>
     <Form.Field>
-        <input type="Text" name="ability3" onChange={this.handleChange} />
+        <TextArea type="Text" name="ability3" onChange={this.handleChange} />
     </Form.Field>
     <Form.Field>
-        <input type="Text" name="ability4" onChange={this.handleChange} />
+        <TextArea type="Text" name="ability4" onChange={this.handleChange} />
     </Form.Field>
     <Form.Field>
-        <input type="Text" name="ability5" onChange={this.handleChange} />
+        <TextArea type="Text" name="ability5" onChange={this.handleChange} />
     </Form.Field>
     <Form.Field>
-        <input type="Text" name="ability6" onChange={this.handleChange} />
+        <TextArea type="Text" name="ability6" onChange={this.handleChange} />
     </Form.Field>
     <Form.Field>
-        <input type="Text" name="ability7" onChange={this.handleChange} />
+        <TextArea type="Text" name="ability7" onChange={this.handleChange} />
     </Form.Field>
     <Form.Field>
-        <input type="Text" name="ability8" onChange={this.handleChange} />
+        <TextArea type="Text" name="ability8" onChange={this.handleChange} />
     </Form.Field>
     <Form.Field>
-        <input type="Text" name="ability9" onChange={this.handleChange} />
+        <TextArea type="Text" name="ability9" onChange={this.handleChange} />
     </Form.Field>
     <Form.Field>
-        <input type="Text" name="ability10" onChange={this.handleChange} />
+        <TextArea type="Text" name="ability10" onChange={this.handleChange} />
     </Form.Field>
     <Form.Field>
-        <input type="Text" name="ability11" onChange={this.handleChange} />
+        <TextArea type="Text" name="ability11" onChange={this.handleChange} />
     </Form.Field>
     <Form.Field>
-        <input type="Text" name="ability12" onChange={this.handleChange} />
+        <TextArea type="Text" name="ability12" onChange={this.handleChange} />
     </Form.Field>
     <Form.Field>
-        <input type="Text" name="ability13" onChange={this.handleChange} />
+        <TextArea type="Text" name="ability13" onChange={this.handleChange} />
     </Form.Field>
     <Form.Field>
-        <input type="Text" name="ability14" onChange={this.handleChange} />
+        <TextArea type="Text" name="ability14" onChange={this.handleChange} />
     </Form.Field>
     <Form.Field>
-        <input type="Text" name="ability15" onChange={this.handleChange} />
+        <TextArea type="Text" name="ability15" onChange={this.handleChange} />
     </Form.Field>
 
 
