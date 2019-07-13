@@ -6,6 +6,7 @@ import {HashRouter, Route} from 'react-router-dom'
 
 import Admin from './admin'
 import Home from './home'
+import User from './user'
 
 
 class NavBar extends Component {
@@ -20,12 +21,16 @@ class NavBar extends Component {
             </Menu.Item>
             <Menu.Item>
                 <NavLink to="/admin">Admin</NavLink>
-            </Menu.Item>   
+            </Menu.Item> 
+            <Menu.Item>
+                <NavLink to="/user">user</NavLink>
+            </Menu.Item>     
         </Menu>
     </div>
     <div className="content">
         <Route exact path="/" component ={Home}/>
         <Route exact path="/admin" component ={Admin}/>
+        <Route exact path="/user" component ={User}/>
 
 
     </div>

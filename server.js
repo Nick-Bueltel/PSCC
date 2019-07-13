@@ -15,6 +15,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 app.use('/api/races', require('./src/routes/api/raceRoute'));
 app.use('/api/classes', require('./src/routes/api/classRoute'))
+app.use('/api/characters', require('./src/routes/api/characterRoute'))
 
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));

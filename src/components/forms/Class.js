@@ -1,7 +1,7 @@
 
 import React from 'react'
 import {Component} from 'react'
-import {Button, Checkbox, Form, TextArea} from 'semantic-ui-react'
+import {Button, Form, TextArea} from 'semantic-ui-react'
 import classService from '../../utils/classService'
 
 class CreateClassForm extends Component{
