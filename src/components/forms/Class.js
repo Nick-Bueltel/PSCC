@@ -14,11 +14,23 @@ class CreateClassForm extends Component{
     statBonus1Amount: null,
     statBonus2 : "",
     statBonus2Amount: null,
-    proficiency1 : false,
-    subClass1 : {},
-    subClass2 : {},
-    abilities : {},
-    purchaseRQ : false,
+    proficies : "",
+    ability1 : "",
+    ability2 : "",
+    ability3 : "",
+    ability4 : "",
+    ability5 : "",
+    ability6 : "",
+    ability7 : "",
+    ability8 : "",
+    ability9 : "",
+    ability10 : "",
+    ability11 : "",
+    ability12 : "",
+    ability13 : "",
+    ability14 : "",
+    ability15 : "",
+    
    }
    
    
@@ -118,31 +130,59 @@ class CreateClassForm extends Component{
         <Checkbox name="proficiency1" onChange={this.handleChange}/>
     </Form.Field>
     
-    <Form.Field>
+
+
+
         <label>Abilities</label>
-
-
-    </Form.Field>
-
     <Form.Field>
-        <label>Sub Class 1 Name</label>
-        <input name="subClass1" type="Text" onChange={this.handleChange}/>
+        <input type="Text" name="ability1" onChange={this.handleChange} />
     </Form.Field>
-        <Form.Field>
-            <label> Sub Class  1 Description </label>
-            <input name='subClass1.subDescription' type="Text" onChange={this.handleChange} />
-        </Form.Field>
-        <Form.Field>
-            <label> Sub Class  1 Ability </label>
-            <input name='subClass1.subDescription' type="Text" onChange={this.handleChange} />
-        </Form.Field>
-    
+    <Form.Field>
+        <input type="Text" name="ability2" onChange={this.handleChange} />
+    </Form.Field>
+    <Form.Field>
+        <input type="Text" name="ability3" onChange={this.handleChange} />
+    </Form.Field>
+    <Form.Field>
+        <input type="Text" name="ability4" onChange={this.handleChange} />
+    </Form.Field>
+    <Form.Field>
+        <input type="Text" name="ability5" onChange={this.handleChange} />
+    </Form.Field>
+    <Form.Field>
+        <input type="Text" name="ability6" onChange={this.handleChange} />
+    </Form.Field>
+    <Form.Field>
+        <input type="Text" name="ability7" onChange={this.handleChange} />
+    </Form.Field>
+    <Form.Field>
+        <input type="Text" name="ability8" onChange={this.handleChange} />
+    </Form.Field>
+    <Form.Field>
+        <input type="Text" name="ability9" onChange={this.handleChange} />
+    </Form.Field>
+    <Form.Field>
+        <input type="Text" name="ability10" onChange={this.handleChange} />
+    </Form.Field>
+    <Form.Field>
+        <input type="Text" name="ability11" onChange={this.handleChange} />
+    </Form.Field>
+    <Form.Field>
+        <input type="Text" name="ability12" onChange={this.handleChange} />
+    </Form.Field>
+    <Form.Field>
+        <input type="Text" name="ability13" onChange={this.handleChange} />
+    </Form.Field>
+    <Form.Field>
+        <input type="Text" name="ability14" onChange={this.handleChange} />
+    </Form.Field>
+    <Form.Field>
+        <input type="Text" name="ability15" onChange={this.handleChange} />
+    </Form.Field>
 
 
-    {/* <Form.Field>
-        <label>Sub Class 1 Name</label>
-        <input name="subClass1" type="Text" onChange={this.handleChange}/>
-    </Form.Field> */}
+
+
     
     <Button type="submit"> Submit </Button>
 
