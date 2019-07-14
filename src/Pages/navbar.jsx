@@ -1,19 +1,24 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom'
-import {Menu} from 'semantic-ui-react'
+import {Menu, Button} from 'semantic-ui-react'
 import {Component} from 'react'
 import {HashRouter, Route} from 'react-router-dom'
+import { withAuth } from '@okta/okta-react';
+import { useAuth } from '../../src/auth';
 
 import Admin from './admin'
 import Home from './home'
 import User from './user'
 
-
-class NavBar extends Component {
-    render() {
-      return (
-<HashRouter>       
-<React.Fragment>
+const NavBar = withAuth(({ auth }) => {
+    const [authenticated, user] = useAuth(auth);
+    if (user) {
+        console.log(user)
+      }  
+    
+    return (
+    <HashRouter>       
+    <React.Fragment>
     <div className="NavBar">
         <Menu>
             <Menu.Item>
@@ -24,20 +29,24 @@ class NavBar extends Component {
             </Menu.Item> 
             <Menu.Item>
                 <NavLink to="/user">user</NavLink>
-            </Menu.Item>     
+            </Menu.Item>  
+            <Menu.Item>
+                {authenticated !== null && (<Button onClick={() => authenticated ? auth.logout() : auth.login()} className="App-link"> Log {authenticated ? 'out' : 'in'} </Button> )}
+            </Menu.Item>   
         </Menu>
     </div>
     <div className="content">
         <Route exact path="/" component ={Home}/>
         <Route exact path="/admin" component ={Admin}/>
         <Route exact path="/user" component ={User}/>
-
-
+    
+    
     </div>
-</React.Fragment>
-</HashRouter>   
+    </React.Fragment>
+    </HashRouter>   
       );
-    }
-  }
-   
-  export default NavBar;
+    
+
+});
+
+export default NavBar;
