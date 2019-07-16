@@ -1,7 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom'
 import {Menu, Button} from 'semantic-ui-react'
-import {Component} from 'react'
 import {HashRouter, Route} from 'react-router-dom'
 import { withAuth } from '@okta/okta-react';
 import { useAuth } from '../../src/auth';
@@ -11,10 +10,19 @@ import Home from './home'
 import User from './user'
 
 const NavBar = withAuth(({ auth }) => {
+    const state={
+        user: "",
+    }
+
+    
+    
     const [authenticated, user] = useAuth(auth);
     if (user) {
-        console.log(user)
-      }  
+        console.log(user.email)
+        state.user=user.email
+    }  
+
+
     
     return (
     <HashRouter>       
@@ -24,21 +32,19 @@ const NavBar = withAuth(({ auth }) => {
             <Menu.Item>
                 <NavLink to="/">Home</NavLink>
             </Menu.Item>
-            <Menu.Item>
-                <NavLink to="/admin">Admin</NavLink>
-            </Menu.Item> 
-            <Menu.Item>
-                <NavLink to="/user">user</NavLink>
-            </Menu.Item>  
+            {state.user === "nickbueltel@gmail.com" ?  <Menu.Item><NavLink to="/admin">Admin </NavLink> </Menu.Item> : null}
+            {state.user !== ""?<Menu.Item><NavLink to="/user">user</NavLink></Menu.Item> : null }
+            
             <Menu.Item>
                 {authenticated !== null && (<Button onClick={() => authenticated ? auth.logout() : auth.login()} className="App-link"> Log {authenticated ? 'out' : 'in'} </Button> )}
-            </Menu.Item>   
+            </Menu.Item>  
+            {state.user !==""?<Menu.Item><label>User: {state.user}</label></Menu.Item> : null} 
         </Menu>
     </div>
     <div className="content">
         <Route exact path="/" component ={Home}/>
         <Route exact path="/admin" component ={Admin}/>
-        <Route exact path="/user" component ={User}/>
+        <Route exact path="/user" render={(props) => <User {...props} email={state.user} />}/>
     
     
     </div>
@@ -50,3 +56,4 @@ const NavBar = withAuth(({ auth }) => {
 });
 
 export default NavBar;
+

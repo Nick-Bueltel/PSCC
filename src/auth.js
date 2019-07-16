@@ -18,6 +18,7 @@ export const useAuth = auth => {
     } else {
       setUser(null);
     }
+    // eslint-disable-next-line
   }, [authenticated]);
 
   return [authenticated, user];

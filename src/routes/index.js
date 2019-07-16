@@ -1,4 +1,4 @@
-var passport = require(“passport”);
+var passport = require('passport');
 
 /* GET Google Authentication API. */
 router.get(

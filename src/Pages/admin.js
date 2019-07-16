@@ -13,10 +13,10 @@ state = {
 }
 
 showClass = () =>{
-    this.state.class === false ? this.setState({["class"]: true}) : this.setState({["class"] : false})
+    this.state.class === false ? this.setState({class: true}) : this.setState({class : false})
 }
 showRace = () =>{
-    this.state.race === false ? this.setState({["race"]: true}) : this.setState({["race"] : false})
+    this.state.race === false ? this.setState({race: true}) : this.setState({race : false})
 }
 
 

@@ -2,6 +2,7 @@ var mongoose = require('mongoose')
 var Schema = mongoose.Schema
 
 var characterSchema = new Schema({
+    user : String,
     name : String,
     race : String,
     class : String,
@@ -14,7 +15,7 @@ var characterSchema = new Schema({
     int : Number, 
     wis : Number,
     cha : Number,
-    abilities : [],
+    abilities : String,
 
 
 
