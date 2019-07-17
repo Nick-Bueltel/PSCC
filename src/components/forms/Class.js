@@ -56,7 +56,7 @@ class CreateClassForm extends Component{
     
     render(){
         return(
-<div>
+<div class="ui container">
 <Form onSubmit={this.handleSubmit}>
     <Form.Field>
         <label>Class Name </label>

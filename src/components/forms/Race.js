@@ -46,7 +46,7 @@ class CreateRaceForm extends Component{
     
     render(){
         return(
-<div>
+<div class="ui container">
     <Form onSubmit={this.handleSubmit} >
         <Form.Field>
         <label>Race Name </label>

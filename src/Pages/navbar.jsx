@@ -39,7 +39,11 @@ const NavBar = withAuth(({ auth }) => {
                 {authenticated !== null && (<Button onClick={() => authenticated ? auth.logout() : auth.login()} className="App-link"> Log {authenticated ? 'out' : 'in'} </Button> )}
             </Menu.Item>  
             {state.user !==""?<Menu.Item><label>User: {state.user}</label></Menu.Item> : null} 
+            <Menu.Item>
+                <h4>Primus Star Character Creator</h4>
+            </Menu.Item>
         </Menu>
+
     </div>
     <div className="content">
         <Route exact path="/" component ={Home}/>
